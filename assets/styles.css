@@ -1,0 +1,34 @@
+.weather-header {
+  background-image: linear-gradient(to right, #3361BA, #210C4F);
+}
+
+.input-group {
+  display: block;
+}
+
+.input-group-append {
+  margin-top: 20px;
+}
+
+/* Button styling */
+.new-city-btn {
+  margin-top: 20px;
+}
+
+#search-button {
+  width: 100%;
+  background-color: #5098E6;
+}
+
+/* Search field styling */
+#search-input {
+  width: 100%;
+  border-radius: 5px;
+  border: #AEAEAE solid 1px;
+  height: 45px;
+}
+
+.card {
+  border-radius: 40px;
+  padding: 5px;
+}
