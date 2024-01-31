@@ -18,7 +18,7 @@ $(document).ready(function () {
     return cityFromLS;
   }
 
-  // Save City upon submission
+  // Save city upon submission
   function saveCity(event, city) {
     event.preventDefault();
     const cityFromLS = initializeLocalStorage();
@@ -45,7 +45,7 @@ $(document).ready(function () {
       });
   }
 
-  // Display current weather conditions for selected city
+  // Display current weather for selected city
   function displayCurrentWeather(city, data) {
     weatherToday.removeClass("d-none");
     const weatherTodayIcon = data.weather[0].icon;
@@ -56,7 +56,7 @@ $(document).ready(function () {
       <p>Humidity: ${data.main.humidity}%</p>`);
   }
 
-  // Display Cities from Local Storage
+  // Display cities from local storage
   function renderCities() {
     citiesButtons.empty();
     const cityFromLS = initializeLocalStorage();
@@ -75,12 +75,12 @@ $(document).ready(function () {
       citiesButtons.append(newCityButton);
     });
 
-    // Add Clear All button
+    // Clear all button
     citiesButtons.append(clearAllButton);
     clearAllButton.on("click", clearAllCities);
   }
 
-  // Clear All Cities in Local Storage
+  // Clear all cities from local storage
   function clearAllCities() {
     localStorage.removeItem("city");
     renderCities();
@@ -122,6 +122,6 @@ $(document).ready(function () {
     saveCity(event, cityValue);
   });
 
-  // Render cities
+  // City render
   renderCities();
 });
